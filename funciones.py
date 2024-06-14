@@ -1,5 +1,7 @@
 lista_trabajadores=[]
 
+cargos=("CEO","DESARROLLADOR","ANALISTA") #0,1,2 
+
 def opcion_1():
     print("registrar")
     nombre_apellido=input("Ingrese nombre y apeññido\n > ")
