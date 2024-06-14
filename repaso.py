@@ -36,7 +36,14 @@ while True:
         print("Trabajador registrado con éxito")
         pass
     elif opc==2:
-        pass
+        if len(lista_trabajadores)==0:
+            print("No hay trabajadores agregados, elija opcion n°1")
+        else:
+            print("Lista Trabajadores")
+            print("Trabajador\tCargo\tSueldo Bruto\tDesc. Salud\tDesc. AFP\tSueldo Líquido")
+            for t in lista_trabajadores: #t: seria cada trabajador de la lista, T es una lista
+                print(f"{t[0]}\t{t[1]}\t{t[2]}\t{t[3]}\t{t[4]}\t{t[5]}")
+
     elif opc==3:
         pass
     elif opc==4:
