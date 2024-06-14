@@ -45,6 +45,21 @@ while True:
                 print(f"{t[0]}\t{t[1]}\t{t[2]}\t{t[3]}\t{t[4]}\t{t[5]}")
 
     elif opc==3:
-        pass
-    elif opc==4:
+        if len(lista_trabajadores)==0:
+            print("No hay trabajadores agregados, elija opcion n°1")
+        else:
+            opc2=int(input("¿Que cargo desea imprimir?\n1. CEO\n2. Desarrollador\n3. Analista\4. Todos\n > "))
+            if opc2==4:
+                with open("Todos_trabajadores.txt","w") as archivo:
+                    for t in lista_trabajadores:
+                        texto=f"{t[0]}  {t[1]}  {t[2]}  {t[3]}  {t[4]} {t[5]}\n"
+                        archivo.write(texto)
+            else:
+                with open("trabajadores_por_cargo.txt","w") as archivo:
+                    for t in lista_trabajadores:
+                        if opc2==t[1]:
+                            texto=f"{t[0]}  {t[1]}  {t[2]}  {t[3]}  {t[4]} {t[5]}\n"
+                            archivo.write(texto)    
+
+    else:
         break
